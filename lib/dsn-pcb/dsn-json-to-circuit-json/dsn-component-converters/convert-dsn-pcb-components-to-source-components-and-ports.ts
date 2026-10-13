@@ -72,6 +72,7 @@ export const convertDsnPcbComponentsToSourceComponentsAndPorts = ({
         center: placeCenter,
         rotation: place.rotation || 0,
         layer: place.side === "back" ? "bottom" : "top",
+        obstructs_within_bounds: false,
         width: pinBounding
           ? (pinBounding.maxX - pinBounding.minX) * transformDsnUnitToMm.a
           : 0,
